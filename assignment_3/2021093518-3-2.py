@@ -69,7 +69,20 @@ def render():
     glLoadIdentity()
 
     glOrtho(-5,5, -5,5, -8,8)
-    gluLookAt(5,3,5,    1,1,-1,     0,1,0)
+    
+    # Replace this call with two glRotatef() calls and one glTranslatef() call
+    # gluLookAt(5,3,5,    1,1,-1,     0,1,0)
+
+    # eye = (5,3,5)
+    # at = (1,1,-1)
+    # up = (0,1,0)
+    
+    # dir_vector = (1,1,-1) - (5,3,5) = (-4, -2, -6)
+    # normal_vector = (3, 0, -2)
+    glRotatef(-np.degrees(np.arctan2(4, 6)), 0, 1, 0)
+    glRotatef(np.degrees(np.arctan2(2, np.sqrt(4**2 + 6**2))), 3, 0, -2)
+    glTranslatef(-5, -3, -5)
+    
     drawFrame()
 
     glColor3ub(255, 255, 255)
