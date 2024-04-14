@@ -83,9 +83,7 @@ def main():
 
     # Make the window's context current
     glfw.make_context_current(window)
-
     glfw.set_key_callback(window, key_callback)
-
     # set the number of screen refresh to wait before calling glfw.swap_buffer().
     # if your monitor refresh rate is 60Hz, the while loop is repeated every 1/60 sec 
     glfw.swap_interval(1)
