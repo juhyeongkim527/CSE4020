@@ -3,8 +3,10 @@ from OpenGL.GL import *
 import numpy as np
 from OpenGL.GLU import *
 
-gCamAng = 0 
-gCamHeight = 1.
+# gCamAng = 0 
+# gCamHeight = 1.
+gCamAng = 40 * np.pi / 180
+gCamHeight = 1.6
 
 def createVertexAndIndexArrayIndexed():
     varr = np.array([
