@@ -64,6 +64,7 @@ def display():
 
         else:
             cowCount = -1
+            cow2wld = cowPosition[0].copy()
             cowPosition = []
 
     glFlush();
@@ -72,7 +73,7 @@ def display():
 
 2. When `cowCount` reaches 6, the cow roller coaster animation starts. It calls the `spline` function and the `cowHeadDirection` function, implemented below, and continues drawing the cow using the `drawCow` function as long as `animTime` is within the specified `CYCLECOUNT`.
 
-3. If `animTime` exceeds `CYCLECOUNT`, it resets `cowCount` and `cowPosition`.
+3. If `animTime` exceeds `CYCLECOUNT`, it resets `cowCount`, `cowPosition` and `cow2wld` to initial cow face direction.
 
 
 ### `spline` function

@@ -258,6 +258,7 @@ def display():
 
         else:
             cowCount = -1
+            cow2wld = cowPosition[0].copy()
             cowPosition = []
 
     glFlush();
